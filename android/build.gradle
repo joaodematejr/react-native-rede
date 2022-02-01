@@ -44,6 +44,9 @@ android {
 
 repositories {
     mavenLocal()
+    flatDir {
+      dirs 'libs'
+    }
     maven {
         // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
         url("$rootDir/../node_modules/react-native/android")
@@ -61,4 +64,5 @@ dependencies {
     implementation files('libs/SatGerLib.aar')
     // Lib exclusiva para o GPOS700
     implementation files('libs/payment-1.14.10.181016.aar')
+    implementation files('libs/sdk_3.0_release.aar')
 }

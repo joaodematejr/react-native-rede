@@ -17,6 +17,10 @@ const SmartRede = NativeModules.SmartRede
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return SmartRede.multiply(a, b);
+export function handleRede(
+  type: string,
+  value: number,
+  installments: number
+): Promise<number> {
+  return SmartRede.handleRede(type, value, installments);
 }
